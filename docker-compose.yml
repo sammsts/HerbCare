@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  reactnative:
+    build: .
+    ports:
+      - "8081:8081"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: ["npx", "react-native", "start"]
